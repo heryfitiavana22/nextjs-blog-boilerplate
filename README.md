@@ -2,6 +2,8 @@
 
 This repository provides a boilerplate for building a blog using **Next.js**, **MDX**, and **Contentlayer**.
 
+Demo : [https://nextjs-blog-boilerplate.vercel.app/](https://nextjs-blog-boilerplate.vercel.app/)
+
 ## Features
 - **MDX**: Write your blog posts in Markdown and include React components within your content.
 - **Contentlayer**: Effortlessly manage your content with a seamless integration between your content source and Next.js.
