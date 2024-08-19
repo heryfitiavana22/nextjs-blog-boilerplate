@@ -4,29 +4,33 @@ category: "personnel"
 description: "Faire un blog avec nextjs, mdx"
 date: "08/10/2024"
 technos: ["Nextjs", "MDX", "Contentlayer"]
-github: "https://github.com/heryfitiavana22/stream-video-app"
+github: https://github.com/heryfitiavana22/nextjs-blog-boilerplate
 type: Project
 ---
 
-Dans le but de mieux comprendre les fonctionnalités de streaming vidéo, j'ai développé ce simple projet web pour illustrer l'utilisation des stream pour la lecture de vidéos avec React et Express.js.
+Un boilerplate pour faire un blog avec **nextjs**, **mdx**, **contentlayer**
 
-### Fonctionnalités :
 
-👉 Lecture de vidéos en streaming.
-
-👉 Contrôles personnalisés : barre de progression de la lecture, temps de lecture actuel, lecture/pause, activation/désactivation du son.
-
-```css
-/* tout le document */
-html {
-  scroll-behavior: smooth;
+export function Components() {
+  return (
+    <div className="mt-12 lg:columns-2 columns-1 gap-3">
+      <img
+        src={"/images/projects/project-1.png"}
+        alt="project"
+        className="inline-block mt-3 rounded-lg shadow w-full h-full object-cover"
+      />
+      <img
+        src={"/images/projects/project-2.png"}
+        alt="project"
+        className="inline-block mt-3 rounded-lg shadow w-full h-full object-cover"
+      />
+      <img
+        src={"/images/projects/project-3.png"}
+        alt="project"
+        className="inline-block mt-3 rounded-lg shadow w-full h-full object-cover"
+      />
+    </div>
+  );
 }
-```
 
-```css
-/* pour un container spécifique */
-.container {
-  scroll-behavior: smooth;
-}
-```
-
+<Components />

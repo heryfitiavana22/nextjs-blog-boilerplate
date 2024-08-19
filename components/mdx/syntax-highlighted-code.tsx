@@ -10,7 +10,7 @@ export function SyntaxHighlightedCode({
 }: SyntaxHighlightedCodeProps): ReactNode {
   const content = children?.toString() || "";
   const isCode =
-    /[{};=<>]/.test(content.toString()) ||
+    /[{};=<>npm]/.test(content.toString()) ||
     hljs.getLanguage(content.split(/\s+/)[0]);
 
   if (isCode) {

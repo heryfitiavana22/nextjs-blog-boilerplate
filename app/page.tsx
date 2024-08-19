@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { getAllBlogs } from "@/lib/get-blogs";
 import { Section } from "@/components/section/section";
 import { H1 } from "@/components/typography/typography";
 
 export default function Home() {
-  console.log(getAllBlogs());
-
   return (
     <>
       <Section>

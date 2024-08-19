@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: PageProps) {
   const project = getOneProject(params.id);
 
   return {
-    title: project.name + " | Hery Fitiavana",
+    title: project.name,
     description: project.description,
   };
 }

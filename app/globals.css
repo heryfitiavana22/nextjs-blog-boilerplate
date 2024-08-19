@@ -67,3 +67,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+article a {
+  text-decoration: underline;
+  color: hsl(var(--primary-foreground));
+  word-wrap: break-word;
+}
