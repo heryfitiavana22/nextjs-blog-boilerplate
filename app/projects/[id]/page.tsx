@@ -4,7 +4,7 @@ import { Section } from "@/components/section/section";
 import { H1 } from "@/components/typography/typography";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getOneProject } from "@/lib/get-projects";
+import { getAllProjects, getOneProject } from "@/lib/get-projects";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -70,4 +70,12 @@ export async function generateMetadata({ params }: PageProps) {
     title: project.name,
     description: project.description,
   };
+}
+
+export function generateStaticParams() {
+  const projects = getAllProjects();
+  
+  return projects.map((project) => ({
+    id: project._raw.sourceFileName.replace(".mdx", ""),
+  }));
 }

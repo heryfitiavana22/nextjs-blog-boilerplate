@@ -2,7 +2,7 @@ import { MDXContent } from "@/components/mdx/mdx-content";
 import { Section } from "@/components/section/section";
 import { H1 } from "@/components/typography/typography";
 import { DateHumanizer } from "@/lib/date-humanizer";
-import { getOneBlog } from "@/lib/get-blogs";
+import { getAllBlogs, getOneBlog } from "@/lib/get-blogs";
 import Image from "next/image";
 
 export default async function Page({ params }: PageProps) {
@@ -59,4 +59,12 @@ export async function generateMetadata({ params }: PageProps) {
     title: blog.title,
     description: blog.description,
   };
+}
+
+export function generateStaticParams() {
+  const blogs = getAllBlogs();
+  
+  return blogs.map((blog) => ({
+    id: blog._raw.sourceFileName.replace(".mdx", ""),
+  }));
 }
